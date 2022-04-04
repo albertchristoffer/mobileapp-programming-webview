@@ -16,6 +16,6 @@
     <item
         android:id="@+id/dribbble"
         android:orderInCategory="120"
-        android:title="Dribbble"
+        android:title="@string/dribbble"
         app:showAsAction="never" />
 </menu>
