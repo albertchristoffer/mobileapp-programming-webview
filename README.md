@@ -23,7 +23,7 @@ En variabel av typen WebView initierades i MainActivity.java som i en onCreate()
         myWebView.setWebViewClient(new WebViewClient());
 ```
 
-En html-fil skapades som intern webbsida i en fil döpt till "Assets". Denna fil tillsammans med Högskolan i Skövdes hemsida användes sedan i appen. För att byta mellan sidorna måste användare klicka på menybaren och i en dropdown-meny välja vilken sida som ska visas. När användaren klickar på någon av alternativen i dropdown-menyn körs en funktion som kontrollerar menyalternativets ID. Funktionen kör sedan en annan funktion som visar respektive sida i WebViewen beroende på vilket ID menyalternativet har.
+En html-fil skapades som intern webbsida i en mapp döpt till "Assets". Denna fil tillsammans med Högskolan i Skövdes hemsida användes sedan i appen. För att byta mellan sidorna måste användare klicka på menybaren och i en dropdown-meny välja vilken sida som ska visas. När användaren klickar på någon av alternativen i dropdown-menyn körs en funktion som kontrollerar menyalternativets ID. Funktionen kör sedan en annan funktion som visar respektive sida i WebViewen beroende på vilket ID menyalternativet har.
 ```
 int id = item.getItemId();
 
