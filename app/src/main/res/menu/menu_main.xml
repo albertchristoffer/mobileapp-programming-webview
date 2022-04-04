@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.webviewapp.MainActivity">
+
     <item
         android:id="@+id/action_external_web"
         android:orderInCategory="100"
@@ -11,5 +12,10 @@
         android:id="@+id/action_internal_web"
         android:orderInCategory="110"
         android:title="@string/action_internal_web"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/dribbble"
+        android:orderInCategory="120"
+        android:title="Dribbble"
         app:showAsAction="never" />
 </menu>

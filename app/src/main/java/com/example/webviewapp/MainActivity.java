@@ -1,5 +1,6 @@
 package com.example.webviewapp;
 
+import android.content.ClipData;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,11 +21,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void showExternalWebPage(){
         // TODO: Add your code for showing external web page here
+        myWebView.loadUrl("https://his.se");
+
     }
 
     public void showInternalWebPage(){
         // TODO: Add your code for showing internal web page here
+        myWebView.loadUrl("file:///android_asset/about.html");
     }
+
+    public void showDribble(){
+        myWebView.loadUrl("https://dribbble.com");
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +45,10 @@ public class MainActivity extends AppCompatActivity {
         myWebView = findViewById(R.id.my_webview);
         myWebView.getSettings().setJavaScriptEnabled(true);
         myWebView.setWebViewClient(new WebViewClient());
-        myWebView.loadUrl("file:///android_asset/about.html");
+
+
+
+
 
         /*
         * Rename your App. Tip: Values->Strings
@@ -85,18 +97,24 @@ public class MainActivity extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_external_web) {
             Log.d("==>","Will display external web page");
+            showExternalWebPage();
             return true;
         }
 
         if (id == R.id.action_internal_web) {
             Log.d("==>","Will display internal web page");
+            showInternalWebPage();
             return true;
         }
+
+        if(id == R.id.dribbble)
+            showDribble();
 
         return super.onOptionsItemSelected(item);
     }
